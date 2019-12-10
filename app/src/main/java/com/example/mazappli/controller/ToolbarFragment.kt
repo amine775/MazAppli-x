@@ -1,4 +1,4 @@
-package com.example.mazappli
+package com.example.mazappli.controller
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
+import com.example.mazappli.R
 import kotlinx.android.synthetic.main.toolbar_fragment.*
-import java.text.FieldPosition
 
 /**
  * Created by <name> on <date>.
@@ -18,7 +17,7 @@ import java.text.FieldPosition
 class ToolbarFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
 
     var seekvalue = 10
-    var activityCallback: ToolbarFragment.ToolbarListener?=null
+    var activityCallback: ToolbarListener?=null
 
     interface ToolbarListener {
         fun onButtonClick(position: Int, text: String)
@@ -39,7 +38,8 @@ class ToolbarFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
         savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment
-        val view = inflater?.inflate(R.layout.toolbar_fragment,
+        val view = inflater?.inflate(
+            R.layout.toolbar_fragment,
             container, false)
 
         val seekBar: SeekBar? = view?.findViewById(R.id.seekBar1)

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".controller.MainActivity">
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.mazappli.ToolbarFragment"
+        android:name="com.example.mazappli.controller.ToolbarFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/fragment3"
-        android:name="com.example.mazappli.TextFragment"
+        android:name="com.example.mazappli.controller.TextFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
