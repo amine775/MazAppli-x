@@ -1,10 +1,10 @@
 package com.example.mazappli.controller
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.example.mazappli.R
 import kotlinx.android.synthetic.main.text_fragment.*
 
@@ -18,7 +18,7 @@ class TextFragment : Fragment() {
             R.layout.text_fragment,
             container, false)
     }
-    fun changeTextProperties(text: String)
+    fun changeTextProperties(text: String?)
     {
         text_fragment.text = text
     }
