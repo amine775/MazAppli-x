@@ -48,9 +48,9 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
                     val objectWeather = WeatherClass()
 
                     objectWeather.ville=ville
-                    objectWeather.temp= ((weatherResponse.main!!.temp-32)*5/9).toString()
-                    objectWeather.temp_min= ((weatherResponse.main!!.temp_min-32)*5/9).toString()
-                    objectWeather.temp_max= ((weatherResponse.main!!.temp_max-32)*5/9).toString()
+                    objectWeather.temp= (weatherResponse.main!!.temp-273.15).toString()                 //We convert from kelvin to Celcius
+                    objectWeather.temp_min= (weatherResponse.main!!.temp_min-273.15).toString()
+                    objectWeather.temp_max= (weatherResponse.main!!.temp_max-273.15).toString()
                     objectWeather.pays=weatherResponse.sys!!.country
 
 
