@@ -14,12 +14,12 @@ class TextFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
 
-        return inflater?.inflate(
+        return inflater.inflate(
             R.layout.text_fragment,
             container, false)
     }
     fun changeTextProperties(text: String?)
     {
-        text_fragment.text = text
+        text_frag.text = text
     }
 }
