@@ -8,28 +8,28 @@
     tools:context=".controller.MainActivity">
 
     <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.mazappli.controller.LonLatFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/fragment3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122"
-        tools:layout="@layout/lonlat_fragment" />
-
-    <fragment
         android:id="@+id/fragment3"
         android:name="com.example.mazappli.controller.TextFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="394dp"
+        android:layout_height="392dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517"
         tools:layout="@layout/text_fragment" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.mazappli.controller.LonLatFragment"
+        android:layout_width="402dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="496dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/lonlat_fragment" />
+
 
 </android.support.constraint.ConstraintLayout>
