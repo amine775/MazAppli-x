@@ -49,14 +49,15 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
 
                     objectWeather.ville=ville
                     objectWeather.temp= (weatherResponse.main!!.temp-273.15).toString()                 //We convert from kelvin to Celcius
-                    objectWeather.temp_min= (weatherResponse.main!!.temp_min-273.15).toString()
-                    objectWeather.temp_max= (weatherResponse.main!!.temp_max-273.15).toString()
+                    objectWeather.temp_wind= (weatherResponse.wind!!.speed).toString()
+                    objectWeather.temp_rain= (weatherResponse.rain!!.h3).toString()
+                    objectWeather.temp_cloud= (weatherResponse.clouds!!.all).toString()
                     objectWeather.pays=weatherResponse.sys!!.country
 
 
 
 
-                    weatherData = "A ${objectWeather.ville} (${objectWeather.pays}), \n il fait actuellement ${objectWeather.temp} °C. \n Il fait au plus bas ${objectWeather.temp_min} °C. \n Il fait au plus haut ${objectWeather.temp_max} °C"
+                    weatherData = "A ${objectWeather.ville} (${objectWeather.pays}), \n il fait actuellement ${objectWeather.temp} °C. \n Le vent souffle a ${objectWeather.temp_wind}. \n Nuage :${objectWeather.temp_cloud}. \n Pluie :${objectWeather.temp_rain}"
 
                     Log.d("onResponse", "results = $weatherData")
                 }
