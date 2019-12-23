@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ville_text"
     android:layout_width="match_parent"
@@ -7,21 +8,37 @@
 
     <TextView
         android:id="@+id/text_frag"
-        android:layout_width="321dp"
-        android:layout_height="621dp"
+        android:layout_width="wrap_content"
+        android:layout_height="445dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginRight="53dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/textimg"
+        android:layout_width="370dp"
+        android:layout_height="179dp"
+        android:layout_below="@+id/text_frag"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="41dp"
+        app:srcCompat="@drawable/soleil" />
 </RelativeLayout>

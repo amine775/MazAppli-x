@@ -1,5 +1,6 @@
 package com.example.mazappli.controller
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.util.Log
@@ -16,6 +17,7 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
 
 
     private var weatherData: String? = null
+    val objectWeather = WeatherClass()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +30,11 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
         ) as TextFragment
          Log.d("onButtonClicked","ville : $ville")
         getCurrentData(ville)
-        textFragment.changeTextProperties(weatherData)
+        var draw1 : Drawable? = null
+        if (objectWeather.temp_rain.equals(null)){
+            draw1 = resources.getDrawable(R.drawable.nuage)
+        }
+        textFragment.changeTextProperties(weatherData, draw1)
     }
 
 
@@ -45,7 +51,6 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
                 if (response.code() == 200) {
 
                     val weatherResponse = response.body()!!
-                    val objectWeather = WeatherClass()
 
                     objectWeather.ville=ville
                     objectWeather.temp= (weatherResponse.main!!.temp-273.15).toString()                 //We convert from kelvin to Celcius
@@ -60,7 +65,7 @@ class MainActivity : FragmentActivity(), LonLatFragment.ButListener {
                     weatherData = "A ${objectWeather.ville} (${objectWeather.pays}), \n il fait actuellement ${objectWeather.temp} °C. \n Le vent souffle a ${objectWeather.temp_wind}. \n Nuage :${objectWeather.temp_cloud}. \n Pluie :${objectWeather.temp_rain}"
 
                     Log.d("onResponse", "results = $weatherData")
-                }
+                } 
             }
 
             override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {

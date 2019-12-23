@@ -1,5 +1,6 @@
 package com.example.mazappli.controller
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -18,8 +19,9 @@ class TextFragment : Fragment() {
             R.layout.text_fragment,
             container, false)
     }
-    fun changeTextProperties(text: String?)
+    fun changeTextProperties(text: String?, img: Drawable?)
     {
         text_frag.text = text
+        textimg.setImageDrawable(img)
     }
 }
