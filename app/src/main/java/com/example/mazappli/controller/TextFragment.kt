@@ -19,9 +19,9 @@ class TextFragment : Fragment() {
             R.layout.text_fragment,
             container, false)
     }
-    fun changeTextProperties(text: String?, img: Drawable?)
+    fun changeTextProperties(text: String?, img : Drawable?)
     {
-        text_frag.text = text
-        textimg.setImageDrawable(img)
+        this.text_frag.text = text
+        this.textimg.setImageDrawable(img)
     }
 }

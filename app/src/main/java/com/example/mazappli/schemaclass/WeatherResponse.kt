@@ -45,7 +45,7 @@ class Clouds {
 }
 
 class Rain {
-    @SerializedName("3h")
+    @SerializedName("h3")
     var h3: Float = 0.toFloat()
 }
 
